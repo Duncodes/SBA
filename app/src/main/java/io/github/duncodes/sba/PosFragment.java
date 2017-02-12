@@ -81,6 +81,7 @@ public class PosFragment extends Fragment {
 
         View rootView = inflater.inflate(R.layout.fragment_pos, container, false);
         listview = (ListView) rootView.findViewById(R.id.products_listview);
+        getActivity().setTitle("POS");
 
 //        get list from jsno or database
         Inventory a = new Inventory();

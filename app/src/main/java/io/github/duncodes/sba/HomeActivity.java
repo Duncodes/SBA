@@ -18,7 +18,11 @@ import android.view.MenuItem;
 
 
 public class HomeActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener ,ManageItemsAdapter.OnFragmentInteractionListener,PosFragment.OnFragmentInteractionListener,BusinessAnaliticsFragment.OnFragmentInteractionListener {
+        implements NavigationView.OnNavigationItemSelectedListener ,
+        ManageItemsFragment.OnFragmentInteractionListener,
+        PosFragment.OnFragmentInteractionListener,
+        BusinessAnaliticsFragment.OnFragmentInteractionListener,
+        profileFragment.OnFragmentInteractionListener {
 
 
 
@@ -43,14 +47,7 @@ public class HomeActivity extends AppCompatActivity
             fragmentManager.beginTransaction().replace(R.id.flContent, fragment).commit();
         }
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -107,11 +104,11 @@ public class HomeActivity extends AppCompatActivity
             // Handle the camera action
             fragmentClass = PosFragment.class;
         } else if (id == R.id.Inventory) {
-            fragmentClass = ManageItemsAdapter.class;
+            fragmentClass = ManageItemsFragment.class;
         } else if (id == R.id.Accoutuing) {
             fragmentClass = BusinessAnaliticsFragment.class;
         } else if (id == R.id.Profile) {
-
+            fragmentClass = profileFragment.class;
         }
 
         try {

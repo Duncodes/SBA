@@ -1,45 +1,35 @@
 package io.github.duncodes.sba;
 
 import android.content.Context;
-import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ListView;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import io.github.duncodes.sba.Model.Inventory;
 
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link ManageItemsFragment.OnFragmentInteractionListener} interface
+ * {@link profileFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link ManageItemsFragment#newInstance} factory method to
+ * Use the {@link profileFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ManageItemsFragment extends Fragment {
+public class profileFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-    private ListView listview;
+
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
 
-    public ManageItemsFragment() {
+    public profileFragment() {
         // Required empty public constructor
     }
 
@@ -49,11 +39,11 @@ public class ManageItemsFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment ManageItemsFragment.
+     * @return A new instance of fragment profileFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static ManageItemsFragment newInstance(String param1, String param2) {
-        ManageItemsFragment fragment = new ManageItemsFragment();
+    public static profileFragment newInstance(String param1, String param2) {
+        profileFragment fragment = new profileFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -68,57 +58,13 @@ public class ManageItemsFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View rootView = inflater.inflate(R.layout.fragment_manage_items, container, false);
-        listview = (ListView) rootView.findViewById(R.id.manage_products_listview);
-        FloatingActionButton fab = (FloatingActionButton) rootView.findViewById(R.id.fab);
-        getActivity().setTitle("Manage Inventory");
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-               startActivity(new Intent(getContext(),AddItemactivity.class));
-            }
-        });
-
-//        get list from json or database
-        Inventory a = new Inventory();
-        a.setName("Bannana");
-        a.setPrice((float) 100.00);
-
-        Inventory b = new Inventory();
-        b.setName("Cat 2 test");
-        b.setPrice((float) 10.00);
-
-
-        List<Inventory> inventory =new ArrayList();;
-        inventory.add(0,a);
-        inventory.add(1,b);
-
-//        final ArrayList<String> list = new ArrayList<String>();
-//        for (int i = 0; i < inventory.size(); ++i) {
-//            inventory.add(new Inventory());
-//        }
-
-        final ManageItemsAdapter adapter = new ManageItemsAdapter(getContext(),R.layout.manage_item_list_row,inventory);
-        ListView lv = listview;
-        lv.setAdapter(adapter);
-
-        // listening to single listitem click
-        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view,
-                                    int position, long id) {
-
-            }
-        });
-        return  rootView;
+        return inflater.inflate(R.layout.fragment_profile, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event

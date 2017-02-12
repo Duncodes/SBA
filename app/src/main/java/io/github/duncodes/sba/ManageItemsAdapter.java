@@ -27,7 +27,7 @@ public class ManageItemsAdapter extends ArrayAdapter{
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = LayoutInflater.from(getContext());
 
-        View view = inflater.inflate(R.layout.list_row,parent,false);
+        View view = inflater.inflate(R.layout.manage_item_list_row,parent,false);
 
         Inventory item  = (Inventory) getItem(position);
 
