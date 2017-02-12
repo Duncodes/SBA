@@ -1,13 +1,10 @@
 package io.github.duncodes.sba;
 
-import android.app.Fragment;
-import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -21,7 +18,7 @@ import android.view.MenuItem;
 
 
 public class HomeActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener ,ManageItemsFragment.OnFragmentInteractionListener,PosFragment.OnFragmentInteractionListener,BusinessAnaliticsFragment.OnFragmentInteractionListener {
+        implements NavigationView.OnNavigationItemSelectedListener ,ManageItemsAdapter.OnFragmentInteractionListener,PosFragment.OnFragmentInteractionListener,BusinessAnaliticsFragment.OnFragmentInteractionListener {
 
 
 
@@ -110,7 +107,7 @@ public class HomeActivity extends AppCompatActivity
             // Handle the camera action
             fragmentClass = PosFragment.class;
         } else if (id == R.id.Inventory) {
-            fragmentClass = ManageItemsFragment.class;
+            fragmentClass = ManageItemsAdapter.class;
         } else if (id == R.id.Accoutuing) {
             fragmentClass = BusinessAnaliticsFragment.class;
         } else if (id == R.id.Profile) {
