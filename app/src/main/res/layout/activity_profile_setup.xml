@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dip" >
+
+        <!-- View Title Label -->
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip"
+            android:text="Setup Business Profile"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+        <!-- Name Label -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="5dip"
+            android:layout_margin="5dip"
+            >
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/business_name" />
+        <!-- Name TextField -->
+        <EditText
+            android:id="@+id/businessName"
+            android:layout_width="fill_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content" android:hint="Enter your Business Name"/>
+        <!-- Email Label -->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="5dip">
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/location" />
+        <!-- Email TextField -->
+
+        <EditText
+            android:id="@+id/Location"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="Enter Location ie Nyeri"
+             />
+        </LinearLayout>
+        <!-- Password Label -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_margin="5dip">
+        <Spinner
+            android:id="@+id/categories"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:entries="@array/category_array"
+            android:prompt="@string/category_prompt"
+            android:gravity="center"
+            ></Spinner>
+        </LinearLayout>
+        <Button
+            android:id="@+id/btnUpdateProfile"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:background="#00F"
+            android:onClick="registerUser"
+            android:text="@string/update"
+            android:textColor="#fff" />
+
+        <!-- Link to Login Screen -->
+
+
+    </LinearLayout>
+</ScrollView>

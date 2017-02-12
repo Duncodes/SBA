@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">SBA</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Login</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="username">username</string>
+    <string name="btnRegister">Register</string>
+    <string name="pwd">password</string>
+    <string name="email">email</string>
+    <string name="name">Username</string>
+    <string name="register_title">Register Here</string>
+    <string name="signup">SignUp</string>
+    <string name="or">OR</string>
+    <string name="update">Update</string>
+    <string name="location">Location</string>
+    <string name="business_name">Business Name</string>
+
+    <string name="category_prompt">Choose business Category</string>
+
+    <string-array name="category_array">
+        <item>Small Retail</item>
+        <item>Hardware Store</item>
+        <item>Agrovet Store</item>
+        <item>Grocery store</item>
+        <item>Chemist</item>
+    </string-array>
+    <string name="title_activity_home">HomeActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Manage item flagment</string>
+</resources>
